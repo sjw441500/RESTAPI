@@ -92,7 +92,7 @@ router.get('/posts',(req,res) =>{
 
 router.get('/posts/:postId',(req,res) =>{
     var postId = req.params.postId;
-    post.findById(user_id,(err,result) =>{
+    post.findById(postId,(err,result) =>{
         if(err)
         res.status(500).send(err);
         res.status(200).json(result);
